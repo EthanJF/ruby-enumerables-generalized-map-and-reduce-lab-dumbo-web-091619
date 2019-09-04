@@ -11,7 +11,7 @@ def reduce(source_array)
   result;
   starting_point = 0
   source_array.length.times { |i|
-    result += yield(source_array[i], starting_point)
+    result = yield(source_array[i], starting_point)
   }
   result
 end
