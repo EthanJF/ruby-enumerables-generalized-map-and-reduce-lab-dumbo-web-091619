@@ -7,11 +7,9 @@ def map(source_array)
   result
 end
 
-def reduce(source_array)
-  result;
-  starting_point = 0
+def reduce(source_array,starting_point = 0)
   source_array.length.times { |i|
-    result = yield(source_array[i], starting_point)
+    starting_point = yield(source_array[i],starting_point = 0)
   }
-  result
+  starting_point
 end
