@@ -16,7 +16,7 @@ def reduce(source_array,starting_point = nil)
     i = 1
   end
     
-  source_array.length.times { |i|
+  while i < source_array.length
     starting_point = yield(num1,source_array[i])
   }
   starting_point
