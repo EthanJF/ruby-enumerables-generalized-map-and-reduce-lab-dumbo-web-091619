@@ -9,9 +9,13 @@ end
 
 def reduce(source_array,starting_point = nil)
   if starting_point
+    num1 = starting_point
+  else
+    num1 = source_array[0]
+  end
     
   source_array.length.times { |i|
-    starting_point = yield(starting_point,source_array[i])
+    starting_point = yield(num1,source_array[i])
   }
   starting_point
 end
