@@ -8,6 +8,8 @@ def map(source_array)
 end
 
 def reduce(source_array,starting_point = nil)
+  if starting_point
+    
   source_array.length.times { |i|
     starting_point = yield(starting_point,source_array[i])
   }
